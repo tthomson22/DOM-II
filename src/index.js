@@ -15,6 +15,10 @@ window.onload = function (evt){
             btn.style.padding = '0%';
         })
     }
+    document.querySelector('.content-pick .btn').addEventListener('click', function(evt){
+        evt.preventDefault();
+        console.log(`${evt.target.textContent} is not a trusted link`);
+    })
 
     document.body.addEventListener('click', function(evt){
         evt.target.style.fontWeight = 'bold'
@@ -39,11 +43,4 @@ window.onload = function (evt){
             sections.classList.toggle('animate');
         })
     }
-
-    const introContainer = document.querySelector('.intro p')
-    console.log(introContainer)
-    introContainer.addEventListener('focus', function(evt){
-        console.log('here')
-        evt.target.style.background = 'orange'
-    })
 }
